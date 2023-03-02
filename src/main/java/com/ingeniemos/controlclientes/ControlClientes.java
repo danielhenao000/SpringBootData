@@ -1,13 +1,13 @@
-package com.ingeniemos.holamundothymeleafdata;
+package com.ingeniemos.controlclientes;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HolamundothymeleafdataApplication {
+public class ControlClientes {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HolamundothymeleafdataApplication.class, args);
+		SpringApplication.run(ControlClientes.class, args);
 	}
 
 }
