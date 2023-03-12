@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
     <title>Inicio</title>
 </head>
 <body>
-    <h1>Inicio</h1>
+    <h1>Inicio, Hola <span th:text="${username}"></span></h1>
     <header th:replace="layout/plantilla :: header"></header>
-    <a th:href="@{/agregar}">Crear Persona</a>
+    <a sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/agregar}">[[#{persona.crear}]]</a>
     <div th:if="${personas != null and !personas.empty} ">
     <table border="1">
         <tr>
